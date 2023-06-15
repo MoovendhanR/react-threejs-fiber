@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 
 
 function Model(props){
-   const {scene} = useGLTF("/bmw.glb");
+   const {scene} = useGLTF("/outdoor_fireplace.glb");
 
    return <primitive object={scene} {...props}/>
 }
@@ -12,7 +12,7 @@ function Bmw() {
 
   return (
   <Canvas dpr={[1,2]} shadows camera={{fav:45}} style={{"position":"absolute"}}>
-    <color attach="background" args={["#101010"]}/>
+    <color attach="background" args={["#ab745a"]}/>
     <PresentationControls speed={1.5} global zoom={.5} polar={[-0.1,Math.PI/4]}>
       <Stage environment={null}>
            <Model scale={0.01}/>
