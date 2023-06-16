@@ -5,7 +5,7 @@ import { useGLTF, MeshReflectorMaterial, Environment, Stage, PresentationControl
 
 
 function Model(props) {
-    const { scene, nodes, materials } = useGLTF('/lambo.glb')
+    const { scene, nodes, materials } = useGLTF('/bmw.glb')
     useLayoutEffect(() => {
       scene.traverse((obj) => obj.type === 'Mesh' && (obj.receiveShadow = obj.castShadow = true))
       Object.assign(nodes.wheel003_020_2_Chrome_0.material, { metalness: 0.9, roughness: 0.4, color: new THREE.Color('#020202') })
